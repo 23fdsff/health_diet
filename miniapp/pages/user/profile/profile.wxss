@@ -1,0 +1,29 @@
+.title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 24rpx;
+}
+
+.form-item {
+  margin-bottom: 20rpx;
+}
+
+.label {
+  display: block;
+  font-size: 26rpx;
+  color: #555;
+  margin-bottom: 8rpx;
+}
+
+.input,
+.picker-value {
+  background: #f7f9fb;
+  border-radius: 12rpx;
+  padding: 20rpx 24rpx;
+  font-size: 26rpx;
+}
+
+.btn-primary {
+  margin-top: 32rpx;
+}
+

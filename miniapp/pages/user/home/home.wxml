@@ -1,0 +1,36 @@
+<view class="card">
+  <view class="header">
+    <text class="hello">你好，{{nickName}}</text>
+    <text class="sub">为你准备了今日三套饮食方案</text>
+  </view>
+  <view class="quick-row">
+    <button size="mini" bindtap="toProfile">健康档案</button>
+    <button size="mini" bindtap="toDietRecord">饮食记录</button>
+  </view>
+</view>
+
+<view class="card">
+  <view class="section-title">今日推荐</view>
+  <block wx:for="{{plans}}" wx:key="planIndex">
+    <view class="plan-card">
+      <view class="plan-header">
+        <text>方案 {{item.planIndex}}</text>
+        <text class="score">{{item.score}} 分</text>
+      </view>
+      <view class="meal-row">
+        <text>早餐：</text>
+        <text class="meal-name">{{item.breakfastName || '未设置'}}</text>
+      </view>
+      <view class="meal-row">
+        <text>午餐：</text>
+        <text class="meal-name">{{item.lunchName || '未设置'}}</text>
+      </view>
+      <view class="meal-row">
+        <text>晚餐：</text>
+        <text class="meal-name">{{item.dinnerName || '未设置'}}</text>
+      </view>
+    </view>
+  </block>
+  <button class="btn-primary" bindtap="regenerate">重新生成三套方案</button>
+</view>
+

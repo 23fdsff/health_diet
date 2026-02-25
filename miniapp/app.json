@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/user/home/home",
+    "pages/user/profile/profile",
+    "pages/user/diet-record/diet-record"
+  ],
+  "window": {
+    "navigationBarTitleText": "健康饮食推荐",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2"
+}
+

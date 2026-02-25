@@ -1,0 +1,55 @@
+<view class="card">
+  <view class="title">新增饮食记录</view>
+
+  <view class="form-item">
+    <text class="label">日期</text>
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view class="picker-value">{{date}}</view>
+    </picker>
+  </view>
+
+  <view class="form-item">
+    <text class="label">餐次</text>
+    <picker mode="selector" range="{{mealOptions}}" value="{{mealIndex}}" bindchange="onMealChange">
+      <view class="picker-value">{{mealOptions[mealIndex]}}</view>
+    </picker>
+  </view>
+
+  <view class="form-item">
+    <text class="label">食谱ID(可选)</text>
+    <input class="input" type="number" placeholder="已知推荐食谱ID可填写" value="{{form.recipeId}}" bindinput="onInput" data-field="recipeId" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">描述</text>
+    <input class="input" placeholder="例如 番茄鸡蛋面一碗" value="{{form.description}}" bindinput="onInput" data-field="description" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">估算热量(kcal)</text>
+    <input class="input" type="digit" placeholder="例如 500" value="{{form.calories}}" bindinput="onInput" data-field="calories" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">满意度(1-5)</text>
+    <input class="input" type="number" placeholder="1-5" value="{{form.satisfaction}}" bindinput="onInput" data-field="satisfaction" />
+  </view>
+
+  <button class="btn-primary" bindtap="onSubmit">提交记录</button>
+</view>
+
+<view class="card">
+  <view class="title">最近记录</view>
+  <view class="stat">总记录：{{stat.total}}，近7天：{{stat.last7Days}}</view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="record-item">
+      <view class="row">
+        <text>{{item.recordDate}} {{formatMeal(item.mealType)}}</text>
+        <text class="cal">{{item.calories || '-'}} kcal</text>
+      </view>
+      <view class="row desc">{{item.description || ('食谱ID：' + (item.recipeId || '-'))}}</view>
+      <view class="row">满意度：{{item.satisfaction || '-'}}</view>
+    </view>
+  </block>
+</view>
+

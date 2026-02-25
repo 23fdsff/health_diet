@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="logo-area">
+    <text class="title">个人健康饮食推荐系统</text>
+  </view>
+
+  <view class="card">
+    <view class="tab">
+      <text class="tab-item {{activeTab==='user'?'active':''}}" bindtap="switchTab" data-tab="user">
+        普通用户
+      </text>
+      <text class="tab-item {{activeTab==='account'?'active':''}}" bindtap="switchTab" data-tab="account">
+        管理端登录
+      </text>
+    </view>
+
+    <view wx:if="{{activeTab==='user'}}">
+      <button class="btn-primary" open-type="getUserInfo" bindgetuserinfo="onWxUserInfo">
+        微信授权登录
+      </button>
+    </view>
+
+    <view wx:elif="{{activeTab==='account'}}">
+      <input class="input" placeholder="账号（admin/dietitian/ent）" bindinput="onInputUsername" />
+      <input class="input" placeholder="密码（任意）" password="true" bindinput="onInputPassword" />
+      <button class="btn-primary" bindtap="onAccountLogin">登录</button>
+    </view>
+  </view>
+</view>
+

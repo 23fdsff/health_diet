@@ -1,0 +1,19 @@
+page {
+  background-color: #f7f9fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin: 24rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  background: #3FB489;
+  color: #ffffff;
+  border-radius: 999rpx;
+}
+

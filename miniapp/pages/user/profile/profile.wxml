@@ -1,0 +1,48 @@
+<view class="card">
+  <view class="title">个人健康档案</view>
+
+  <view class="form-item">
+    <text class="label">性别</text>
+    <picker mode="selector" range="{{genderOptions}}" value="{{genderIndex}}" bindchange="onGenderChange">
+      <view class="picker-value">{{genderOptions[genderIndex]}}</view>
+    </picker>
+  </view>
+
+  <view class="form-item">
+    <text class="label">年龄</text>
+    <input class="input" type="number" placeholder="请输入年龄" value="{{form.age}}" bindinput="onInput" data-field="age" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">身高(cm)</text>
+    <input class="input" type="digit" placeholder="例如 170" value="{{form.heightCm}}" bindinput="onInput" data-field="heightCm" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">体重(kg)</text>
+    <input class="input" type="digit" placeholder="例如 60" value="{{form.weightKg}}" bindinput="onInput" data-field="weightKg" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">慢性疾病</text>
+    <input class="input" placeholder="例如 高血压/糖尿病/无" value="{{form.chronicDisease}}" bindinput="onInput" data-field="chronicDisease" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">过敏食材</text>
+    <input class="input" placeholder="例如 花生,海鲜,无" value="{{form.allergy}}" bindinput="onInput" data-field="allergy" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">口味偏好</text>
+    <input class="input" placeholder="例如 清淡,微辣" value="{{form.tastePrefer}}" bindinput="onInput" data-field="tastePrefer" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">健康目标</text>
+    <input class="input" placeholder="例如 减脂,增肌,控血压" value="{{form.goal}}" bindinput="onInput" data-field="goal" />
+  </view>
+
+  <button class="btn-primary" bindtap="onSave">保存档案</button>
+</view>
+

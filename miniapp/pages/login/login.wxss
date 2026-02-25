@@ -1,0 +1,49 @@
+.container {
+  padding-top: 120rpx;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 24rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.tab {
+  display: flex;
+  border-radius: 999rpx;
+  background: #f0f3f7;
+  padding: 8rpx;
+  margin-bottom: 32rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx 0;
+  border-radius: 999rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.tab-item.active {
+  background: #3FB489;
+  color: #fff;
+}
+
+.input {
+  background: #f7f9fb;
+  border-radius: 999rpx;
+  padding: 20rpx 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.btn-primary {
+  margin-top: 16rpx;
+}
+
